@@ -31,11 +31,8 @@
  * @return array
  */
 
-
-function tuntosocks_services()
-{
+function tuntosocks_services() {
     global $config;
-
     $services = array();
     $services[] = array(
         'description' => gettext('tun2socks gVisor TCP/IP stack'),
@@ -50,11 +47,6 @@ function tuntosocks_services()
     return $services;
 }
 
-function tuntosocks_syslog()
-{
-    $logfacilities = array();
-    $logfacilities['tun2socks'] = array(
-        'facility' => array('tun2socks'),
-    );
-    return $logfacilities;
+function tuntosocks_syslog() {
+    return ['tun2socks' => ['facility' => ['tun2socks']]];
 }
