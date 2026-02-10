@@ -50,15 +50,15 @@ chmod +x /usr/local/etc/tun2socks/tun2socks # Даем права на испо�
 
 # ⚙️ Скачивание конфигурационных файлов
 log_message "Загрузка конфигурационных файлов для tun2socks"
-fetch -q -o /usr/local/etc/tun2socks/config.yaml https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/config.yaml
+fetch -q -o /usr/local/etc/tun2socks/config.yaml https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/config.yaml
 normalize_unix /usr/local/etc/tun2socks/config.yaml
-fetch -q -o /usr/local/etc/rc.d/tun2socks https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/tun2socks
+fetch -q -o /usr/local/etc/rc.d/tun2socks https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/tun2socks
 normalize_unix /usr/local/etc/rc.d/tun2socks
-fetch -q -o /usr/local/opnsense/service/conf/actions.d/actions_tun2socks.conf https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/actions_tun2socks.conf
+fetch -q -o /usr/local/opnsense/service/conf/actions.d/actions_tun2socks.conf https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/actions_tun2socks.conf
 normalize_unix /usr/local/opnsense/service/conf/actions.d/actions_tun2socks.conf
-fetch -q -o /usr/local/etc/inc/plugins.inc.d/tun2socks.inc https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/tun2socks.inc
-normalize_unix /usr/local/etc/inc/plugins.inc.d/tun2socks.inc
-fetch -q -o /usr/local/etc/rc.syshook.d/early/50-tun2socks https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/50-tun2socks
+fetch -q -o /usr/local/etc/inc/plugins.inc.d/tun2socks.inc https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/tuntosocks.inc
+normalize_unix /usr/local/etc/inc/plugins.inc.d/tuntosocks.inc
+fetch -q -o /usr/local/etc/rc.syshook.d/early/50-tun2socks https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/50-tun2socks
 normalize_unix /usr/local/etc/rc.syshook.d/early/50-tun2socks
 
 # 🧩 Настройка службы и автозапуска
@@ -78,15 +78,15 @@ mkdir -p /usr/local/etc/xray-core/
 
 # 📥 Скачивание конфигурационных файлов
 log_message "Загрузка конфигурационных файлов для Xray"
-fetch -q -o /usr/local/etc/rc.d/xray https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/xray
+fetch -q -o /usr/local/etc/rc.d/xray https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/xray
 normalize_unix /usr/local/etc/rc.d/xray
-fetch -q -o /usr/local/opnsense/service/conf/actions.d/actions_xray.conf https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/actions_xray.conf
+fetch -q -o /usr/local/opnsense/service/conf/actions.d/actions_xray.conf https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/actions_xray.conf
 normalize_unix /usr/local/opnsense/service/conf/actions.d/actions_xray.conf
-fetch -q -o /usr/local/etc/inc/plugins.inc.d/xray.inc https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/xray.inc
+fetch -q -o /usr/local/etc/inc/plugins.inc.d/xray.inc https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/xray.inc
 normalize_unix /usr/local/etc/inc/plugins.inc.d/xray.inc
-fetch -q -o /usr/local/etc/rc.syshook.d/start/91-xray https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/91-xray
+fetch -q -o /usr/local/etc/rc.syshook.d/start/91-xray https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/91-xray
 normalize_unix /usr/local/etc/rc.syshook.d/start/91-xray
-fetch -q -o /usr/local/etc/xray-core/update-xray.sh https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray-core/update-xray.sh
+fetch -q -o /usr/local/etc/xray-core/update-xray.sh https://github.com/AlaiyaNetwork/Opnsence-xray-tun2sock/raw/refs/heads/main/xray-core/update-xray.sh
 normalize_unix /usr/local/etc/xray-core/update-xray.sh
 
 # ⚙️ Настройка службы и автозапуска
